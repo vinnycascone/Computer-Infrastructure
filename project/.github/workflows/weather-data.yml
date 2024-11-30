@@ -1,0 +1,9 @@
+name: Automate Weather Data
+
+on:
+  # Scheduling the workflow to run daily at 10 AM UTC
+  schedule:
+    - cron: '0 10 * * *'
+
+  # Allowing manual triggering of the workflow
+  workflow_dispatch:
