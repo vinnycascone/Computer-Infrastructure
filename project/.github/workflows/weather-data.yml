@@ -21,5 +21,16 @@ jobs:
       - name: Run Weather Script
         run: |
          chmod +x weather.sh 
-         ./weather.sh        
+         ./weather.sh 
+        # Step 3: Commit and push changes back to the repository
+      - name: Commit and Push Changes
+        run: |
+         git config --global user.name "vinnycascone"
+         git config --global user.email "v.cascone92@gmail.com"
+         git add .
+         git commit -m "Update weather data [automated]"
+         git push
+        env:
+        # GitHub token for authentication
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
  
