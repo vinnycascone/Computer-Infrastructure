@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checking out the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
+        # Step 2: Running the weather.sh script
+      - name: Run Weather Script
+        run: |
+         chmod +x weather.sh 
+         ./weather.sh        
+ 
