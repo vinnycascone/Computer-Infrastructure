@@ -7,3 +7,13 @@ on:
 
   # Allowing manual triggering of the workflow
   workflow_dispatch:
+
+jobs:
+  update-weather-data:
+    # Using an Ubuntu-based virtual machine
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
